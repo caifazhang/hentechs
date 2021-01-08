@@ -42,6 +42,7 @@ a {
   text-decoration: none !important;
 }
 a:hover {
+  color: #fff;
   font-weight: 700;
 }
 
@@ -94,7 +95,7 @@ a:hover {
 .navbar {
   position: absolute;
   left: 0%;
-  top: 4%;
+  top: 3vh;
   right: 0%;
   bottom: auto;
   display: block;
@@ -138,7 +139,6 @@ a:hover {
   font-size: 40px;
   line-height: 100%;
   font-weight: 400;
-  text-shadow: 0 7px 11px rgba(0, 0, 0, 0.63);
 }
 
 .h3-heading.text-shawdow {
@@ -240,6 +240,8 @@ a:hover {
   font-size: 20px;
   font-weight: 300;
 }
+
+
 
 .dropdown:hover {
   -webkit-transform: translate(1px, 1px);
@@ -378,7 +380,7 @@ a:hover {
   width: 70vw;
   max-width: none;
   margin: 0px auto;
-  top: -40px;
+  /* top: -40px; */
 }
 
 .container-exp {
@@ -408,7 +410,7 @@ a:hover {
 
 .footer-liner {
   display: inline-block;
-  width: 180px;
+  width: 10vw;
   height: 2px;
   margin: 0px auto;
   background-color: #707070;
@@ -677,6 +679,15 @@ a:hover {
   left: -8px;
 }
 
+.copyright{ 
+  width: 70vw;
+  font-family: allotrope, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 133px;
+  color: #212529;
+}
+
 .paragraph-3 {
   display: block;
   width: 70vw;
@@ -800,6 +811,7 @@ a:hover {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  margin: auto;
 }
 
 .nav-link {
@@ -867,7 +879,7 @@ a:hover {
   right: 0%;
   bottom: auto;
   display: block;
-  height: 20vh;
+  height: 60vh;
   max-height: none;
   min-height: auto;
   margin-top: 0px;
@@ -880,6 +892,7 @@ a:hover {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  
 }
 
 .pool-copy {
@@ -895,9 +908,9 @@ a:hover {
   margin-right: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 200px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(171, 171, 255, 0.56))), url('../images/alex-hall-SS-d4nMNwiQ-unsplash.jpg');
-  background-image: linear-gradient(180deg, #000, rgba(171, 171, 255, 0.56)), url('../images/alex-hall-SS-d4nMNwiQ-unsplash.jpg');
-  background-position: 0px 0px, 50% 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33,37,41,0.78)), to(rgba(171, 171, 255, 0.2))), url('../images/alex-hall-SS-d4nMNwiQ-unsplash.jpg');
+  background-image: linear-gradient(180deg, rgba(33,37,41,0.78), rgba(117, 117, 136, 0.2)), url('../images/alex-hall-SS-d4nMNwiQ-unsplash.jpg');
+  background-position: 0px 0px, 50% 100%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
 }
@@ -1692,12 +1705,30 @@ a:hover {
   .pool-image {
     height: 100%;
     border-bottom-right-radius: 200px;
-  }
+  } 
+}
+
+@media screen and (max-width: 1200px) {
+  
 }
 
 @media screen and (max-width: 991px) {
   .h1-heading.text-shadow {
     font-size: 8vw;
+  }
+
+  .dropdown-list.w--open {
+    border-radius: 14px;
+    background-color: #ffffff;
+  }
+
+  .dropdown {
+    font-family:allotrope, sans-serif ;
+    color: #000;
+  }
+
+  .dropdown-window.w--open {
+    background-color: #efefef;
   }
 
   .h3-heading.text-shawdow {
@@ -1710,6 +1741,8 @@ a:hover {
   }
 
   .nav-menu {
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
     background-color: #efefef;
   }
 
@@ -1724,6 +1757,14 @@ a:hover {
   .dropdown-button {
     border-radius: 0px;
     color: #000;
+  }
+
+  .dropdown-button span {
+    display: inline-block;
+    width: 45vw;
+    padding-bottom: 18px;
+    padding-right: 60px;
+    border-bottom: 1px solid #6a5ccf;
   }
 
   .section-2 {
@@ -1847,9 +1888,36 @@ a:hover {
   .div-block-3 {
     align-items: center;
   }
+
+  .pool-copy {
+    border-bottom-right-radius: 140px
+  }
+
+  .nav-link {
+    padding: 5px 40px;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+    font-family: allotrope, sans-serif;
+    text-align: left;
+    color: #000;
+    font-size: 20px;
+    font-weight: 300;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .dropdown-button span {
+    width: 60vw;
+  }
+  .copyright {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+  .footer-logo {
+    margin: 25px auto;
+  }
   .section-1 {
     height: 90vh;
   }
@@ -2012,8 +2080,12 @@ a:hover {
     height: 80vh;
   }
 
+  .footer-logo {
+    margin: 25px auto;
+  }
+
   .navbar {
-    top: 0;
+    top: 2% !important;
   }
 
   .pool-div {
@@ -2072,7 +2144,7 @@ a:hover {
   }
 
   .front-page-heading {
-    font-size: 400%;
+    font-size: 300%;
     text-shadow: 0 10px 13px rgba(0, 0, 0, 0.37);
   }
 
